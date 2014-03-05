@@ -1,0 +1,9 @@
+applications:
+- host: SampleNode_CMPE272
+  disk: 1024M
+  name: SampleNode_CMPE272
+  command: node app.js
+  path: .
+  domain: ng.bluemix.net
+  mem: 128M
+  instances: 1
