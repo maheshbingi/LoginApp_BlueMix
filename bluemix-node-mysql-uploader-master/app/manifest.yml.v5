@@ -1,0 +1,16 @@
+---
+applications: 
+- name: NodeMySQLUpload 
+  memory: 256M 
+  instances: 1 
+  url: NodeMySQLUpload-${random-word}.${target-base} 
+  host: NodeMySQLUpload-${random-word} 
+  domain: ${target-base} 
+  path: . 
+  command: node app.js 
+  services:
+    mysql-node-upload: 
+      label: mysql
+      provider: core
+      version: '5.5'
+      plan: '100'
